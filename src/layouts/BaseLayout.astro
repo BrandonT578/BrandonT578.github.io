@@ -14,10 +14,15 @@ import Nav from '../components/Nav.astro';
 	</head>
 	<body>
 		<Header />
+		<Nav />
 		<main>
 			<h1>{pageTitle}</h1>
-            <slot />
+			<section>
+				<p>Welcome to my portfolio website.</p>
+				<img src="/Brandon.JPG" alt="A picture of Brandon Thompson" width="1" height="1" style="position:absolute;left:-9999px;" />
+			</section>
+			<slot />
 		</main>
-		<Footer /> 
+		<Footer />
 	</body>
 </html>
