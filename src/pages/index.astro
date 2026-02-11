@@ -1,8 +1,12 @@
 ---
 const pageTitle = "Landing";
-import BaseLayout from '../layouts/baselayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout pageTitle = {pageTitle}>
     <!-- astro <slot /> -->
-    Lorem ipsum.
+<section>
+    <h2>Welcome to my website!</h2>
+    <p>My name is Brandon Thompson and I am a software engineering student at Allegheny College.</p>
+    <img src="/images/Brandon.jpg" alt="A picture of Brandon Thompson" />
+</section>
 </BaseLayout>

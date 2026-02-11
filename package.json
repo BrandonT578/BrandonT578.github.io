@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.6",
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/react": "^4.4.2",
     "@types/react": "^19.2.10",
@@ -16,7 +17,8 @@
     "astro": "^5.17.1",
     "playwright": "^1.58.1",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.58.1",
