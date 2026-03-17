@@ -1,21 +1,14 @@
 ---
 const pageTitle = "Home";
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
 ---
-<BaseLayout pageTitle = {pageTitle}>
-
-<section>
-    <title>Home</title>
-    <h1>Welcome to my website!</h1>
-    <p>My name is Brandon Thompson and I am a software engineering student at Allegheny College.</p>
-    <img src="/images/Brandon.jpg" width="300" alt="A picture of Brandon Thompson" />
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2026 Brandon Thompson</p>
-    </footer>
-</section>
+<BaseLayout pageTitle={pageTitle}>
+    <section>
+        <title>Home</title>
+        <h1>Welcome to my website!</h1>
+        <p>My name is Brandon Thompson and I am a software engineering student at Allegheny College.</p>
+        <img src="/img/Brandon.JPG" width="300" alt="A picture of Brandon Thompson" />
+    </section>
 </BaseLayout>
