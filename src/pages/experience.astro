@@ -1,9 +1,131 @@
 ---
+const pageTitle = "Experience";
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Experience and Skills";
 ---
-<BaseLayout pageTitle = {pageTitle}>
-  <section>
-    <h2>Experience and Skills</h2>
-    <p>I have experience with python in basic level freshman classes. I took the document engineering course and am currently in computational expression and web design.</p>
+<BaseLayout pageTitle={pageTitle}>
+ 
+  <section class="section">
+    <div class="container">
+      <p class="section-label">My Background</p>
+      <div class="divider"></div>
+      <h1>Experience & Skills</h1>
+      <p class="page-intro">A look at my technical skills, coursework, and hands-on experience building software.</p>
+    </div>
   </section>
+ 
+  <!-- Skills Section -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="section-heading">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group card">
+          <div class="skill-group-header">
+            <span class="skill-icon">💻</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML/CSS</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group card">
+          <div class="skill-group-header">
+            <span class="skill-icon">🛠️</span>
+            <h3>Tools & Frameworks</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Astro</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+        <div class="skill-group card">
+          <div class="skill-group-header">
+            <span class="skill-icon">🧠</span>
+            <h3>Concepts</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Data Structures</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">OOP</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Experience Timeline -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="section-heading">Experience</h2>
+      <div class="timeline">
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="tag">2023 – Present</span>
+            </div>
+            <h3>Allegheny College</h3>
+            <p class="timeline-role">B.S. Software Engineering</p>
+            <p>Studying software engineering with coursework in data structures, algorithms, software design, and web development. Actively working on projects that apply classroom concepts to real-world problems.</p>
+          </div>
+        </div>
+ 
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card">
+            <div class="timeline-meta">
+              <span class="tag">Personal</span>
+            </div>
+            <h3>Personal Projects</h3>
+            <p class="timeline-role">Developer</p>
+            <p>Built and maintained multiple personal projects spanning web development, automation, and software tools. See the Projects page for more details.</p>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Coursework -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <h2 class="section-heading">Relevant Coursework</h2>
+      <div class="course-grid">
+        <div class="course-card card">
+          <span class="course-code">CMPSC 101</span>
+          <p>Data Abstraction</p>
+        </div>
+        <div class="course-card card">
+          <span class="course-code">CMPSC 102</span>
+          <p>Discrete Structures</p>
+        </div>
+        <div class="course-card card">
+          <span class="course-code">CMPSC 200</span>
+          <p>Computer Organization</p>
+        </div>
+        <div class="course-card card">
+          <span class="course-code">CMPSC 301</span>
+          <p>Data Analytics</p>
+        </div>
+        <div class="course-card card">
+          <span class="course-code">CMPSC 302</span>
+          <p>Web Development</p>
+        </div>
+        <div class="course-card card">
+          <span class="course-code">CMPSC 303</span>
+          <p>Algorithms</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+</BaseLayout>

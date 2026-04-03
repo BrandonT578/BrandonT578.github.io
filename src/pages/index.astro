@@ -1,14 +1,75 @@
 ---
 const pageTitle = "Home";
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <section>
-        <title>Home</title>
-        <h1>Welcome to my website!</h1>
-        <p>My name is Brandon Thompson and I am a software engineering student at Allegheny College.</p>
-        <img src="/img/Brandon.JPG" width="300" alt="A picture of Brandon Thompson" />
-    </section>
+ 
+  <!-- Hero Section -->
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="section-label">Software Engineering Student</p>
+        <h1 class="hero-title">Hi, I'm<br /><span class="gradient-text">Brandon Thompson</span></h1>
+        <p class="hero-bio">
+          A software engineering student at Allegheny College passionate about building clean, thoughtful software. I love turning ideas into real, working things.
+        </p>
+        <div class="hero-actions">
+          <a href="/project" class="btn btn-primary">View My Projects</a>
+          <a href="/contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-ring">
+          <img src="/img/Brandon.JPG" alt="Brandon Thompson" class="hero-image" />
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Quick Links Band -->
+  <section class="band section">
+    <div class="container">
+      <div class="band-grid">
+        <a href="/About" class="band-card">
+          <span class="band-icon">👤</span>
+          <span class="band-label">About</span>
+          <span class="band-arrow">→</span>
+        </a>
+        <a href="/experience" class="band-card">
+          <span class="band-icon">💼</span>
+          <span class="band-label">Experience</span>
+          <span class="band-arrow">→</span>
+        </a>
+        <a href="/project" class="band-card">
+          <span class="band-icon">🛠️</span>
+          <span class="band-label">Projects</span>
+          <span class="band-arrow">→</span>
+        </a>
+        <a href="/contact" class="band-card">
+          <span class="band-icon">✉️</span>
+          <span class="band-label">Contact</span>
+          <span class="band-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- About Snippet -->
+  <section class="section">
+    <div class="container about-snippet">
+      <div class="about-text">
+        <p class="section-label">About Me</p>
+        <div class="divider"></div>
+        <h2>Driven by curiosity,<br />built with code.</h2>
+        <p>
+          I'm currently studying software engineering at Allegheny College, where I focus on building reliable and user-friendly applications. I enjoy working across the full stack and am always looking for new challenges to grow as a developer.
+        </p>
+        <a href="/About" class="btn btn-outline" style="margin-top:1.5rem;">Read More</a>
+      </div>
+      <div class="about-image-block">
+        <img src="/img/Brandon.JPG" alt="Brandon Thompson" />
+      </div>
+    </div>
+  </section>
+ 
 </BaseLayout>

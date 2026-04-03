@@ -1,6 +1,36 @@
 ---
-import Nav from '../components/Nav.astro';
 ---
 <header>
-    <h1>My Portfolio</h1>
+  <div class="header-inner container">
+    <a href="/" class="logo">
+      <span class="logo-initials">BT</span>
+      <span class="logo-name">Brandon Thompson</span>
+    </a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/About">About</a>
+      <a href="/experience">Experience</a>
+      <a href="/project">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <button class="mobile-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/About">About</a>
+    <a href="/experience">Experience</a>
+    <a href="/project">Projects</a>
+    <a href="/contact">Contact</a>
+  </div>
 </header>
+ 
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  toggle?.addEventListener('click', () => {
+    mobileNav?.classList.toggle('open');
+  });
+</script>
+ 
