@@ -5,16 +5,16 @@
    ============================================================ */
 :root,
 [data-theme="dark"] {
-  --color-bg: #0e0a1a;
-  --color-surface: #1a1228;
-  --color-surface-2: #241a38;
-  --color-purple: #7c3aed;
-  --color-purple-light: #a78bfa;
-  --color-purple-muted: #4c2a85;
-  --color-accent: #e879f9;
-  --color-text: #f1f0f5;
-  --color-text-muted: #9d93b8;
-  --color-border: #2e2250;
+  --color-bg: #080d1a;
+  --color-surface: #0d1526;
+  --color-surface-2: #111e33;
+  --color-blue: #1d6ff5;
+  --color-blue-light: #60a5fa;
+  --color-blue-muted: #1e3a6e;
+  --color-accent: #38bdf8;
+  --color-text: #eef2ff;
+  --color-text-muted: #7a9cc4;
+  --color-border: #1a2d4d;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', sans-serif;
   --max-width: 1100px;
@@ -25,22 +25,22 @@
    CSS VARIABLES — LIGHT
    ============================================================ */
 [data-theme="light"] {
-  --color-bg: #f8f7ff;
+  --color-bg: #f0f6ff;
   --color-surface: #ffffff;
-  --color-surface-2: #ede9fe;
-  --color-purple: #7c3aed;
-  --color-purple-light: #6d28d9;
-  --color-purple-muted: #ddd6fe;
-  --color-accent: #a21caf;
-  --color-text: #1a0a2e;
-  --color-text-muted: #4b4069;
-  --color-border: #ddd6fe;
+  --color-surface-2: #dbeafe;
+  --color-blue: #1d6ff5;
+  --color-blue-light: #1d4ed8;
+  --color-blue-muted: #bfdbfe;
+  --color-accent: #0284c7;
+  --color-text: #0a1628;
+  --color-text-muted: #2d5080;
+  --color-border: #bfdbfe;
 }
 
 [data-theme="light"] body {
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(124, 58, 237, 0.06) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 100%, rgba(162, 28, 175, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 0%, rgba(29, 111, 245, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(2, 132, 199, 0.04) 0%, transparent 50%),
     var(--color-bg);
 }
 
@@ -73,8 +73,8 @@
 }
 
 .theme-toggle:hover {
-  border-color: var(--color-purple-light);
-  color: var(--color-purple-light);
+  border-color: var(--color-blue-light);
+  color: var(--color-blue-light);
 }
 
 [data-theme="dark"] .icon-moon,
@@ -109,8 +109,8 @@ body {
   display: flex;
   flex-direction: column;
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 100%, rgba(232, 121, 249, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 0%, rgba(29, 111, 245, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
     var(--color-bg);
 }
 
@@ -130,7 +130,7 @@ p {
 }
 
 a {
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -167,14 +167,14 @@ ul {
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   margin-bottom: 1rem;
 }
 
 .divider {
   width: 3rem;
   height: 3px;
-  background: linear-gradient(90deg, var(--color-purple), var(--color-accent));
+  background: linear-gradient(90deg, var(--color-blue), var(--color-accent));
   border-radius: 2px;
   margin-bottom: 1.5rem;
 }
@@ -188,7 +188,7 @@ ul {
 }
 
 .card:hover {
-  border-color: var(--color-purple-muted);
+  border-color: var(--color-blue-muted);
   transform: translateY(-2px);
 }
 
@@ -196,7 +196,7 @@ ul {
   display: inline-block;
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
@@ -220,12 +220,12 @@ ul {
 }
 
 .btn-primary {
-  background: var(--color-purple);
+  background: var(--color-blue);
   color: white;
 }
 
 .btn-primary:hover {
-  background: #6d28d9;
+  background: #1558d6;
   color: white;
   transform: translateY(-1px);
 }
@@ -237,8 +237,8 @@ ul {
 }
 
 .btn-outline:hover {
-  border-color: var(--color-purple-light);
-  color: var(--color-purple-light);
+  border-color: var(--color-blue-light);
+  color: var(--color-blue-light);
 }
 
 
@@ -267,8 +267,8 @@ ul {
 }
 
 .theme-toggle:hover {
-  border-color: var(--color-purple-light);
-  color: var(--color-purple-light);
+  border-color: var(--color-blue-light);
+  color: var(--color-blue-light);
 }
 
 /* Show sun in dark mode, moon in light mode */
@@ -311,7 +311,7 @@ header {
 .logo-initials {
   width: 2rem;
   height: 2rem;
-  background: linear-gradient(135deg, var(--color-purple), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-blue), var(--color-accent));
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -352,7 +352,7 @@ nav a::after {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--color-purple-light);
+  background: var(--color-blue-light);
   transition: width 0.2s ease;
 }
 
@@ -451,7 +451,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
 }
 
 .footer-links svg {
@@ -486,7 +486,7 @@ footer {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-purple-light), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-blue-light), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -516,7 +516,7 @@ footer {
   min-height: 220px;
   border-radius: 50%;
   padding: 4px;
-  background: linear-gradient(135deg, var(--color-purple), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-blue), var(--color-accent));
   flex-shrink: 0;
   overflow: hidden;
 }
@@ -552,7 +552,7 @@ footer {
 }
 
 .band-card:hover {
-  border-color: var(--color-purple-muted);
+  border-color: var(--color-blue-muted);
   background: var(--color-surface-2);
   transform: translateY(-2px);
 }
@@ -569,7 +569,7 @@ footer {
 }
 
 .band-arrow {
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   font-size: 1rem;
   transition: transform 0.2s;
 }
@@ -641,8 +641,8 @@ footer {
 }
 
 .social-link:hover {
-  color: var(--color-purple-light);
-  border-color: var(--color-purple-muted);
+  color: var(--color-blue-light);
+  border-color: var(--color-blue-muted);
 }
 
 .about-text-col h1 {
@@ -652,7 +652,7 @@ footer {
 
 .subtitle {
   font-size: 1rem;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -731,7 +731,7 @@ footer {
   top: 0.75rem;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--color-purple), transparent);
+  background: linear-gradient(to bottom, var(--color-blue), transparent);
 }
 
 .timeline-item {
@@ -747,7 +747,7 @@ footer {
   top: 1.25rem;
   width: 10px;
   height: 10px;
-  background: var(--color-purple);
+  background: var(--color-blue);
   border-radius: 50%;
   border: 2px solid var(--color-bg);
   flex-shrink: 0;
@@ -769,7 +769,7 @@ footer {
 
 .timeline-role {
   font-size: 0.875rem;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
@@ -789,7 +789,7 @@ footer {
   display: block;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   letter-spacing: 0.08em;
   margin-bottom: 0.4rem;
 }
@@ -875,7 +875,7 @@ footer {
 
 .project-link {
   font-size: 0.875rem;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   font-weight: 500;
   margin-top: auto;
   padding-top: 0.5rem;
@@ -924,7 +924,7 @@ footer {
 }
 
 a.contact-method:hover {
-  border-color: var(--color-purple-muted);
+  border-color: var(--color-blue-muted);
   transform: translateX(4px);
 }
 
@@ -937,7 +937,7 @@ a.contact-method:hover {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--color-purple-light);
+  color: var(--color-blue-light);
   font-size: 1.1rem;
 }
 
@@ -1002,7 +1002,7 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: var(--color-purple);
+  border-color: var(--color-blue);
 }
 
 .form-note {
@@ -1101,4 +1101,54 @@ textarea:focus {
   .course-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ============================================================
+   CONTACT FORM FEEDBACK
+   ============================================================ */
+.form-success,
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.form-success {
+  background: rgba(29, 111, 245, 0.1);
+  border: 1px solid rgba(29, 111, 245, 0.3);
+  color: var(--color-blue-light);
+}
+
+.form-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.form-success p,
+.form-error p {
+  color: inherit;
+  margin: 0;
+}
+
+/* Formspree hides these by default, shows them on submission */
+[data-fs-success],
+[data-fs-error] {
+  display: none;
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: #f87171;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #f87171;
 }
