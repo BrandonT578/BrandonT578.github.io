@@ -1,0 +1,63 @@
+---
+---
+<div class="slider-header">
+  <h2 class="section-heading">All Projects</h2>
+  <div class="slider-controls">
+    <button class="slider-btn" id="prevBtn" aria-label="Previous project">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <span class="slider-counter"><span id="currentSlide">1</span> / <span id="totalSlides">0</span></span>
+    <button class="slider-btn" id="nextBtn" aria-label="Next project">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="slider-viewport">
+  <div class="slider-track" id="sliderTrack">
+    <slot />
+  </div>
+</div>
+
+<div class="slider-dots" id="sliderDots"></div>
+
+<script>
+  const track = document.getElementById('sliderTrack') as HTMLElement;
+  const prevBtn = document.getElementById('prevBtn') as HTMLButtonElement;
+  const nextBtn = document.getElementById('nextBtn') as HTMLButtonElement;
+  const currentSlideEl = document.getElementById('currentSlide') as HTMLElement;
+  const totalSlidesEl = document.getElementById('totalSlides') as HTMLElement;
+  const dotsContainer = document.getElementById('sliderDots') as HTMLElement;
+
+  const slides = track.querySelectorAll('.slide');
+  const total = slides.length;
+  let current = 0;
+
+  totalSlidesEl.textContent = String(total);
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to project ${i + 1}`);
+    dot.addEventListener('click', () => goTo(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  function goTo(index: number) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    currentSlideEl.textContent = String(current + 1);
+    dotsContainer.querySelectorAll('.slider-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+</script>

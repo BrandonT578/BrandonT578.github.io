@@ -1,9 +1,15 @@
 ---
 const pageTitle = "About";
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PhotoSlider from '../components/Photoslider.astro';
+const photos: { src: string; alt: string }[] = [
+{ src: "/img/Brandon.JPG", alt: "Description of photo 1" },
+{ src: "/img/Brandon.JPG", alt: "Description of photo 2" },
+{ src: "/img/Brandon.JPG", alt: "Description of photo 3" },
+];;
 ---
 <BaseLayout pageTitle={pageTitle}>
- 
+
   <!-- About Hero -->
   <section class="section">
     <div class="container about-hero">
@@ -39,10 +45,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
- 
-  <!-- Long-form bio -->
+
+  <!-- Bio + Photo Slider -->
   <section class="section" style="padding-top:0">
-    <div class="container">
+    <div class="container bio-slider-layout">
+
       <div class="bio-body">
         <p class="section-label">Background</p>
         <div class="divider"></div>
@@ -61,7 +68,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <a href="/contact" class="btn btn-outline">Say Hello</a>
         </div>
       </div>
+
+      <div class="bio-slider-col">
+        <p class="section-label" style="margin-bottom:1rem;">Photos</p>
+        <PhotoSlider photos={photos} />
+      </div>
+
     </div>
   </section>
- 
+
 </BaseLayout>
